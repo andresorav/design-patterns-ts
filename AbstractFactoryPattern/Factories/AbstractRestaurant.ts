@@ -3,6 +3,7 @@ import { IMenuItem } from '../Products/IMenuItem';
 
 export abstract class AbstractRestaurant implements IRestaurant {
 	abstract readonly currency: string;
+	abstract readonly cuisine: string;
 	public readonly name: string;
 
 	constructor(name: string) {
