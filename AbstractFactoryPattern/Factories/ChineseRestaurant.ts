@@ -9,17 +9,18 @@ import { MainCourse } from '../Products/MainCourse';
 import { Tea } from '../Products/Tea';
 
 export class ChineseRestaurant extends AbstractRestaurant {
-	public readonly currency = 'cny';
 	public readonly cuisine = 'chinese';
+	public readonly currency = 'cny';
+	public readonly name = 'Měiwèi de lǚchéng';
 
-	getBreakfastMenu(): IMenuItem[] {
+	public getBreakfastMenu(): IMenuItem[] {
 		return [
 			new Youtiao('Yóutiáo with soy milk',1),
 			new Pudding('Tofu pudding',0.5),
 		];
 	}
 
-	getLunchMenu(): IMenuItem[] {
+	public getLunchMenu(): IMenuItem[] {
 		return [
 			new Noodles('Beef noodles',1),
 			new Noodles('Lanzhou',1),
@@ -31,7 +32,7 @@ export class ChineseRestaurant extends AbstractRestaurant {
 		];
 	}
 
-	getDinnerMenu(): IMenuItem[] {
+	public getDinnerMenu(): IMenuItem[] {
 		return [
 			...this.getLunchMenu(),
 			new MainCourse('Sweet and sour chicken with noodles', 2.5),
@@ -40,7 +41,7 @@ export class ChineseRestaurant extends AbstractRestaurant {
 		]
 	}
 
-	getDrinks(): IMenuItem[] {
+	public getDrinks(): IMenuItem[] {
 		return [
 			new Tea('Red tea', 1.0),
 			new Tea('Black tea', 1.0),

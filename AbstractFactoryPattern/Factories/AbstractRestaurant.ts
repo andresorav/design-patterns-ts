@@ -2,16 +2,12 @@ import { IRestaurant } from './IRestaurant';
 import { IMenuItem } from '../Products/IMenuItem';
 
 export abstract class AbstractRestaurant implements IRestaurant {
-	abstract readonly currency: string;
-	abstract readonly cuisine: string;
-	public readonly name: string;
+	public abstract readonly cuisine: string;
+	public abstract readonly currency: string;
+	public abstract readonly name: string;
 
-	constructor(name: string) {
-		this.name = name;
-	}
-
-	abstract getBreakfastMenu(): IMenuItem[];
-	abstract getLunchMenu(): IMenuItem[];
-	abstract getDinnerMenu(): IMenuItem[];
-	abstract getDrinks(): IMenuItem[];
+	public abstract getBreakfastMenu(): IMenuItem[];
+	public abstract getLunchMenu(): IMenuItem[];
+	public abstract getDinnerMenu(): IMenuItem[];
+	public abstract getDrinks(): IMenuItem[];
 }

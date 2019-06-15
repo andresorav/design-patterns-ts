@@ -12,10 +12,11 @@ import { Pasta } from '../Products/Pasta';
 import { MainCourse } from '../Products/MainCourse';
 
 export class EstonianRestaurant extends AbstractRestaurant {
-	public readonly currency = 'eur';
 	public readonly cuisine = 'estonian';
+	public readonly currency = 'eur';
+	public readonly name = 'Maitsev teekond';
 
-	getDrinks(): IMenuItem[] {
+	public getDrinks(): IMenuItem[] {
 		return [
 			new Caffe('Caffe latte', 2.0),
 			new Caffe('Cappuccino', 3.0),
@@ -24,7 +25,7 @@ export class EstonianRestaurant extends AbstractRestaurant {
 		];
 	}
 
-	getBreakfastMenu(): IMenuItem[] {
+	public getBreakfastMenu(): IMenuItem[] {
 		return [
 			new Porridge('Oatmeal porridge with raspberries', 2),
 			new Porridge('Rice porridge', 2),
@@ -33,7 +34,7 @@ export class EstonianRestaurant extends AbstractRestaurant {
 		];
 	}
 
-	getLunchMenu(): IMenuItem[] {
+	public getLunchMenu(): IMenuItem[] {
 		return [
 			new Pizza('Ham pizza', 5.0),
 			new Pizza('Three cheese pizza', 5.0),
@@ -45,7 +46,7 @@ export class EstonianRestaurant extends AbstractRestaurant {
 		];
 	}
 
-	getDinnerMenu(): IMenuItem[] {
+	public getDinnerMenu(): IMenuItem[] {
 		return [
 			...this.getLunchMenu(),
 			new MainCourse('Angus beef with crispy potatoes', 12.00),

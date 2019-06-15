@@ -4,11 +4,11 @@ import { EstonianRestaurant } from './Factories/EstonianRestaurant';
 import { printRestaurantMenus } from './utils';
 
 
-const italianRestaurant = new ItalianRestaurant('Un delizioso viaggio');
+const italianRestaurant = new ItalianRestaurant();
 printRestaurantMenus(italianRestaurant);
 
-const chineseRestaurant = new ChineseRestaurant('Měiwèi de lǚchéng');
+const chineseRestaurant = new ChineseRestaurant();
 printRestaurantMenus(chineseRestaurant);
 
-const estonianRestaurant = new EstonianRestaurant('Maitsev teekond');
+const estonianRestaurant = new EstonianRestaurant();
 printRestaurantMenus(estonianRestaurant);

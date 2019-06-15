@@ -11,8 +11,9 @@ import { Risotto } from '../Products/Risotto';
 import { MainCourse } from '../Products/MainCourse';
 
 export class ItalianRestaurant extends AbstractRestaurant {
-	public readonly currency = 'eur';
 	public readonly cuisine = 'italian';
+	public readonly currency = 'eur';
+	public readonly name = 'Un delizioso viaggio';
 
 	public getBreakfastMenu(): AbstractMenuItem[] {
 		return [
