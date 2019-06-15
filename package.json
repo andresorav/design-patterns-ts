@@ -1,0 +1,25 @@
+{
+  "name": "design-patterns-ts",
+  "version": "1.0.0",
+  "description": "OOP design patterns written in TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andresorav/design-patterns-ts.git"
+  },
+  "author": "Andres Orav",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andresorav/design-patterns-ts/issues"
+  },
+  "homepage": "https://github.com/andresorav/design-patterns-ts#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^1.10.2",
+    "@typescript-eslint/parser": "^1.10.2",
+    "eslint": "^5.16.0",
+    "typescript": "^3.5.2"
+  }
+}
