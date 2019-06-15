@@ -5,6 +5,7 @@ import { Croissant } from '../Products/Croissant';
 
 export class ItalianRestaurant extends AbstractRestaurant {
 	public readonly currency = 'eur';
+	public readonly cuisine = 'italian';
 
 	getBreakfastMenu(): AbstractMenuItem[] {
 		return [
