@@ -13,7 +13,7 @@ const printMenuItemsTotalPrice = (menuItems: IMenuItem[], currency: string) => {
 };
 
 const printRestaurantMenus = (restaurant: IRestaurant) => {
-	console.log(`\n~~~ ${restaurant.name} ~~~`);
+	console.log(`\n~~~ ${restaurant.name} (${restaurant.cuisine}) ~~~`);
 
 	const menus = [{
 		name: 'Breakfast',
