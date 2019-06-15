@@ -1,9 +1,11 @@
 import { AbstractRestaurant } from './AbstractRestaurant';
 import { IMenuItem } from '../Products/IMenuItem';
 import { Youtiao } from '../Products/Youtiao';
-import { TofuPudding } from '../Products/TofuPudding';
+import { Pudding } from '../Products/Pudding';
 import { Noodles } from '../Products/Noodles';
 import { Dumplings } from '../Products/Dumplings';
+import { Soup } from '../Products/Soup';
+import { MainCourse } from '../Products/MainCourse';
 
 export class ChineseRestaurant extends AbstractRestaurant {
 	public readonly currency = 'cny';
@@ -11,19 +13,29 @@ export class ChineseRestaurant extends AbstractRestaurant {
 
 	getBreakfastMenu(): IMenuItem[] {
 		return [
-			new Youtiao(1),
-			new TofuPudding(0.5),
+			new Youtiao('Yóutiáo with soy milk',1),
+			new Pudding('Tofu pudding',0.5),
+		];
+	}
+
+	getLunchMenu(): IMenuItem[] {
+		return [
+			new Noodles('Beef noodles',1),
+			new Noodles('Lanzhou',1),
+			new Dumplings('Mushroom dumplings',1.5),
+			new Dumplings('Beef dumplings',1.5),
+			new Soup('Chicken soup',0.5),
+			new Soup('Black sesame soup',0.5),
+			new Pudding('Coconut pudding',0.5),
 		];
 	}
 
 	getDinnerMenu(): IMenuItem[] {
 		return [
-			new Noodles(1),
-			new Dumplings(1.5),
-		];
-	}
-
-	getLunchMenu(): IMenuItem[] {
-		return [];
+			...this.getLunchMenu(),
+			new MainCourse('Sweet and sour chicken with noodles', 2.5),
+			new MainCourse('Beef chow fun', 2.5),
+			new MainCourse('Kung pao chicken with rice', 3.0),
+		]
 	}
 }

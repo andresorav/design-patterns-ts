@@ -1,6 +1,6 @@
 import { AbstractRestaurant } from './AbstractRestaurant';
 import { AbstractMenuItem } from '../Products/AbstractMenuItem';
-import { CaffeLatte } from '../Products/CaffeLatte';
+import { Caffe } from '../Products/Caffe';
 import { Croissant } from '../Products/Croissant';
 
 export class ItalianRestaurant extends AbstractRestaurant {
@@ -9,8 +9,8 @@ export class ItalianRestaurant extends AbstractRestaurant {
 
 	getBreakfastMenu(): AbstractMenuItem[] {
 		return [
-			new CaffeLatte(2),
-			new Croissant(3),
+			new Caffe('Caffe latte', 3.0),
+			new Croissant('Croissant', 1.0),
 		];
 	}
 
