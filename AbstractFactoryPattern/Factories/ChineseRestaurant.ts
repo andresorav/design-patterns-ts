@@ -6,6 +6,7 @@ import { Noodles } from '../Products/Noodles';
 import { Dumplings } from '../Products/Dumplings';
 import { Soup } from '../Products/Soup';
 import { MainCourse } from '../Products/MainCourse';
+import { Tea } from '../Products/Tea';
 
 export class ChineseRestaurant extends AbstractRestaurant {
 	public readonly currency = 'cny';
@@ -37,5 +38,13 @@ export class ChineseRestaurant extends AbstractRestaurant {
 			new MainCourse('Beef chow fun', 2.5),
 			new MainCourse('Kung pao chicken with rice', 3.0),
 		]
+	}
+
+	getDrinks(): IMenuItem[] {
+		return [
+			new Tea('Red tea', 1.0),
+			new Tea('Black tea', 1.0),
+			new Tea('Green tea', 1.0),
+		];
 	}
 }

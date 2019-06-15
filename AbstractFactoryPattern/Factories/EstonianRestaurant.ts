@@ -15,13 +15,20 @@ export class EstonianRestaurant extends AbstractRestaurant {
 	public readonly currency = 'eur';
 	public readonly cuisine = 'estonian';
 
+	getDrinks(): IMenuItem[] {
+		return [
+			new Caffe('Caffe latte', 2.0),
+			new Caffe('Cappuccino', 3.0),
+			new Tea('Black tea', 1.0),
+			new Tea('Green tea', 1.0),
+		];
+	}
+
 	getBreakfastMenu(): IMenuItem[] {
 		return [
 			new Porridge('Oatmeal porridge with raspberries', 2),
 			new Porridge('Rice porridge', 2),
 			new Croissant('Croissant with cheese', 1.0),
-			new Caffe('Caffe latte', 2.0),
-			new Tea('Black tea', 2.0),
 			new FriedEggs('Fried eggs with bacon', 2.5),
 		];
 	}
