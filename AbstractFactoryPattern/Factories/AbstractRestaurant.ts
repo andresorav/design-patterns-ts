@@ -13,4 +13,5 @@ export abstract class AbstractRestaurant implements IRestaurant {
 	abstract getBreakfastMenu(): IMenuItem[];
 	abstract getLunchMenu(): IMenuItem[];
 	abstract getDinnerMenu(): IMenuItem[];
+	abstract getDrinks(): IMenuItem[];
 }
