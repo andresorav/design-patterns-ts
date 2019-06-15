@@ -2,6 +2,8 @@ import { AbstractRestaurant } from './AbstractRestaurant';
 import { IMenuItem } from '../Products/IMenuItem';
 import { Youtiao } from '../Products/Youtiao';
 import { TofuPudding } from '../Products/TofuPudding';
+import { Noodles } from '../Products/Noodles';
+import { Dumplings } from '../Products/Dumplings';
 
 export class ChineseRestaurant extends AbstractRestaurant {
 	public readonly currency = 'cny';
@@ -15,7 +17,10 @@ export class ChineseRestaurant extends AbstractRestaurant {
 	}
 
 	getDinnerMenu(): IMenuItem[] {
-		return [];
+		return [
+			new Noodles(1),
+			new Dumplings(1.5),
+		];
 	}
 
 	getLunchMenu(): IMenuItem[] {
