@@ -15,20 +15,20 @@ export class ChineseRestaurant extends AbstractRestaurant {
 
 	public getBreakfastMenu(): IMenuItem[] {
 		return [
-			new Youtiao('Yóutiáo with soy milk',1),
-			new Pudding('Tofu pudding',0.5),
+			new Youtiao('Yóutiáo with soy milk', 1),
+			new Pudding('Tofu pudding', 0.5),
 		];
 	}
 
 	public getLunchMenu(): IMenuItem[] {
 		return [
-			new Noodles('Beef noodles',1),
-			new Noodles('Lanzhou',1),
-			new Dumplings('Mushroom dumplings',1.5),
-			new Dumplings('Beef dumplings',1.5),
-			new Soup('Chicken soup',0.5),
-			new Soup('Black sesame soup',0.5),
-			new Pudding('Coconut pudding',0.5),
+			new Noodles('Beef noodles', 1),
+			new Noodles('Lanzhou', 1),
+			new Dumplings('Mushroom dumplings', 1.5),
+			new Dumplings('Beef dumplings', 1.5),
+			new Soup('Chicken soup', 0.5),
+			new Soup('Black sesame soup', 0.5),
+			new Pudding('Coconut pudding', 0.5),
 		];
 	}
 
