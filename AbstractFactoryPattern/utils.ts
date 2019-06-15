@@ -21,9 +21,10 @@ const printMenuItems = (menuItems: IMenuItem[], currency: string) => {
 
 const printMenuItemsTotalPrice = (menuItems: IMenuItem[], currency: string) => {
 	const priceForItems = menuItems.reduce((sum, current) => sum + current.price, 0);
+	const total = `Total price: ${priceForItems} ${currency}`;
 
-	console.log(Array(14).join('_'));
-	console.log(`Total: ${priceForItems} ${currency}`);
+	console.log(Array(total.length + 1).join('_'));
+	console.log(total);
 };
 
 const printRestaurantMenus = (restaurant: IRestaurant) => {
@@ -38,6 +39,9 @@ const printRestaurantMenus = (restaurant: IRestaurant) => {
 	}, {
 		name: 'Dinner',
 		items: restaurant.getDinnerMenu(),
+	}, {
+		name: 'Drinks',
+		items: restaurant.getDrinks(),
 	}];
 
 	menus.map((menu) => {
