@@ -1,5 +1,15 @@
-import { Restaurant } from './Restaurant';
-import { MenuItem } from '../Products/MenuItem';
+import { MenuItem } from '../products/abstractMenuItem';
+
+export interface Restaurant {
+    readonly cuisine: string;
+    readonly currency: string;
+    readonly name: string;
+
+    getBreakfastMenu(): MenuItem[];
+    getLunchMenu(): MenuItem[];
+    getDinnerMenu(): MenuItem[];
+    getDrinks(): MenuItem[];
+}
 
 export abstract class AbstractRestaurant implements Restaurant {
     public abstract readonly cuisine: string;

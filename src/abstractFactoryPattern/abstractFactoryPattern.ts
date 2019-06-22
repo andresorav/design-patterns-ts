@@ -1,6 +1,6 @@
-import { ItalianRestaurant } from './Factories/ItalianRestaurant';
-import { ChineseRestaurant } from './Factories/ChineseRestaurant';
-import { EstonianRestaurant } from './Factories/EstonianRestaurant';
+import { ItalianRestaurant } from './factories/italianRestaurant';
+import { ChineseRestaurant } from './factories/chineseRestaurant';
+import { EstonianRestaurant } from './factories/estonianRestaurant';
 import { printRestaurantMenus } from './utils';
 
 const patternExample = (): void => {

@@ -1,5 +1,5 @@
-import { Restaurant } from './Factories/Restaurant';
-import { MenuItem } from './Products/MenuItem';
+import { MenuItem } from './products/abstractMenuItem';
+import { Restaurant } from './factories/abstractRestaurant';
 
 interface GroupedMenuItems {
     [type: string]: MenuItem[];

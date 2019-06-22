@@ -1,14 +1,13 @@
-import { AbstractRestaurant } from './AbstractRestaurant';
-import { AbstractMenuItem } from '../Products/AbstractMenuItem';
-import { Caffe } from '../Products/Caffe';
-import { Croissant } from '../Products/Croissant';
-import { MenuItem } from '../Products/MenuItem';
-import { Sandwich } from '../Products/Sandwich';
-import { Pasta } from '../Products/Pasta';
-import { Soup } from '../Products/Soup';
-import { Pizza } from '../Products/Pizza';
-import { Risotto } from '../Products/Risotto';
-import { MainCourse } from '../Products/MainCourse';
+import { AbstractRestaurant } from './abstractRestaurant';
+import { AbstractMenuItem, MenuItem } from '../products/abstractMenuItem';
+import { Caffe } from '../products/caffe';
+import { Croissant } from '../products/croissant';
+import { Sandwich } from '../products/sandwich';
+import { Pasta } from '../products/pasta';
+import { Soup } from '../products/soup';
+import { Pizza } from '../products/pizza';
+import { Risotto } from '../products/risotto';
+import { MainCourse } from '../products/mainCourse';
 
 export class ItalianRestaurant extends AbstractRestaurant {
     public readonly cuisine = 'italian';

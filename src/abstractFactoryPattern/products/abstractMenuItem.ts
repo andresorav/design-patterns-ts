@@ -1,4 +1,8 @@
-import { MenuItem } from './MenuItem';
+export interface MenuItem {
+    readonly name: string;
+    readonly type: string;
+    readonly price: number;
+}
 
 export abstract class AbstractMenuItem implements MenuItem {
     abstract readonly type: string;
