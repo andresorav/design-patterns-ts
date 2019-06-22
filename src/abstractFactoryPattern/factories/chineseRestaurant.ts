@@ -1,12 +1,12 @@
-import { AbstractRestaurant } from './AbstractRestaurant';
-import { MenuItem } from '../Products/MenuItem';
-import { Youtiao } from '../Products/Youtiao';
-import { Pudding } from '../Products/Pudding';
-import { Noodles } from '../Products/Noodles';
-import { Dumplings } from '../Products/Dumplings';
-import { Soup } from '../Products/Soup';
-import { MainCourse } from '../Products/MainCourse';
-import { Tea } from '../Products/Tea';
+import { AbstractRestaurant } from './abstractRestaurant';
+import { Youtiao } from '../products/youtiao';
+import { Pudding } from '../products/pudding';
+import { Noodles } from '../products/noodles';
+import { Dumplings } from '../products/dumplings';
+import { Soup } from '../products/soup';
+import { MainCourse } from '../products/mainCourse';
+import { Tea } from '../products/tea';
+import { MenuItem } from '../products/abstractMenuItem';
 
 export class ChineseRestaurant extends AbstractRestaurant {
     public readonly cuisine = 'chinese';

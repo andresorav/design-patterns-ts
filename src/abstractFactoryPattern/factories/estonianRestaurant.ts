@@ -1,15 +1,15 @@
-import { AbstractRestaurant } from './AbstractRestaurant';
-import { MenuItem } from '../Products/MenuItem';
-import { Porridge } from '../Products/Porridge';
-import { Croissant } from '../Products/Croissant';
-import { Caffe } from '../Products/Caffe';
-import { Tea } from '../Products/Tea';
-import { FriedEggs } from '../Products/FriedEggs';
-import { Pizza } from '../Products/Pizza';
-import { Burger } from '../Products/Burger';
-import { Salad } from '../Products/Salad';
-import { Pasta } from '../Products/Pasta';
-import { MainCourse } from '../Products/MainCourse';
+import { AbstractRestaurant } from './abstractRestaurant';
+import { Porridge } from '../products/porridge';
+import { Croissant } from '../products/croissant';
+import { Caffe } from '../products/caffe';
+import { Tea } from '../products/tea';
+import { FriedEggs } from '../products/friedEggs';
+import { Pizza } from '../products/pizza';
+import { Burger } from '../products/burger';
+import { Salad } from '../products/salad';
+import { Pasta } from '../products/pasta';
+import { MainCourse } from '../products/mainCourse';
+import { MenuItem } from '../products/abstractMenuItem';
 
 export class EstonianRestaurant extends AbstractRestaurant {
     public readonly cuisine = 'estonian';
