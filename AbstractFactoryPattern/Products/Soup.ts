@@ -1,5 +1,5 @@
 import { AbstractMenuItem } from "./AbstractMenuItem";
 
 export class Soup extends AbstractMenuItem {
-	readonly type = 'Soup';
+    public readonly type = 'Soup';
 }
