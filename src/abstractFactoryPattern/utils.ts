@@ -1,5 +1,6 @@
 import { MenuItem } from './products/abstractMenuItem';
 import { Restaurant } from './factories/abstractRestaurant';
+import { printBlue, printYellow } from '../beautifulPrint';
 
 interface GroupedMenuItems {
     [type: string]: MenuItem[];
@@ -19,28 +20,26 @@ const groupMenuItemsByType = (menuItems: MenuItem[]): GroupedMenuItems => {
 
 const printMenuItems = (menuItems: MenuItem[], currency: string): void => {
     const groupedMenuItems = groupMenuItemsByType(menuItems);
+    const itemsToPrint = [];
 
-    Object.keys(groupedMenuItems).forEach((menuItemType: string): void => {
-        console.log(`~ ${menuItemType} ~`);
+    Object.keys(groupedMenuItems).forEach((menuItemType: string, index: number): void => {
+        // adds empty line before types, but not before first one
+        if (index !== 0) {
+            itemsToPrint.push('');
+        }
+
+        itemsToPrint.push(`~~~ ${menuItemType} ~~~`);
 
         groupedMenuItems[menuItemType].forEach((menuItem: MenuItem): void => {
-            console.log(`- ${menuItem.name}: ${menuItem.price} ${currency}`);
+            itemsToPrint.push(`${menuItem.name}: ${menuItem.price} ${currency}`);
         });
-
-        console.log();
     });
-};
 
-const printMenuItemsTotalPrice = (menuItems: MenuItem[], currency: string): void => {
-    const priceForItems = menuItems.reduce((sum, current): number => sum + current.price, 0);
-    const total = `Total price for menu: ${priceForItems} ${currency}`;
-
-    console.log(Array(total.length + 1).join('_'));
-    console.log(total);
+    printYellow(itemsToPrint);
 };
 
 const printRestaurantMenus = (restaurant: Restaurant): void => {
-    console.log(`\n~~~ ${restaurant.name} (${restaurant.cuisine} restaurant) ~~~`);
+    printBlue(`${restaurant.name} (${restaurant.cuisine})`);
 
     const menus = [{
         name: 'Breakfast',
@@ -57,10 +56,9 @@ const printRestaurantMenus = (restaurant: Restaurant): void => {
     }];
 
     menus.forEach((menu): void => {
-        console.log(`\n*** ${menu.name} ***`);
+        printBlue(menu.name);
 
         printMenuItems(menu.items, restaurant.currency);
-        printMenuItemsTotalPrice(menu.items, restaurant.currency);
     });
 };
 
