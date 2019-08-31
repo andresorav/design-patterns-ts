@@ -8,7 +8,8 @@
     "lint": "./node_modules/.bin/eslint --ext ts ./",
     "watch-all": "rm -rf ./build && tsc-watch --onSuccess 'node --inspect=0.0.0.0:9229 ./build/designPatterns.js'",
     "watch-abstract-factory": "rm -rf ./build && tsc-watch --onSuccess 'node --inspect=0.0.0.0:9229 ./build/abstractFactoryPattern/abstractFactoryPattern.js'",
-    "watch-adapter": "rm -rf ./build && tsc-watch --onSuccess 'node --inspect=0.0.0.0:9229 ./build/adapterPattern/adapterPattern.js'"
+    "watch-adapter": "rm -rf ./build && tsc-watch --onSuccess 'node --inspect=0.0.0.0:9229 ./build/adapterPattern/adapterPattern.js'",
+    "watch-bridge": "rm -rf ./build && tsc-watch --onSuccess 'node --inspect=0.0.0.0:9229 ./build/bridgePattern/bridgePattern.js'"
   },
   "repository": {
     "type": "git",
