@@ -2,9 +2,13 @@
   "name": "design-patterns-ts",
   "version": "1.0.0",
   "description": "OOP design patterns written in TypeScript",
-  "main": "index.js",
+  "main": "./build/designPatterns.js",
   "scripts": {
-    "lint": "./node_modules/.bin/eslint --ext ts ./"
+    "build": "rm -rf ./build && tsc",
+    "lint": "./node_modules/.bin/eslint --ext ts ./",
+    "watch-all": "rm -rf ./build && tsc-watch --onSuccess 'node --inspect=0.0.0.0:9229 ./build/designPatterns.js'",
+    "watch-abstract-factory": "rm -rf ./build && tsc-watch --onSuccess 'node --inspect=0.0.0.0:9229 ./build/abstractFactoryPattern/abstractFactoryPattern.js'",
+    "watch-adapter": "rm -rf ./build && tsc-watch --onSuccess 'node --inspect=0.0.0.0:9229 ./build/adapterPattern/adapterPattern.js'"
   },
   "repository": {
     "type": "git",
@@ -20,6 +24,12 @@
     "@typescript-eslint/eslint-plugin": "^1.10.2",
     "@typescript-eslint/parser": "^1.10.2",
     "eslint": "^5.16.0",
-    "typescript": "^3.5.2"
+    "tsc-watch": "^2.2.1",
+    "typescript": "^3.5.3",
+    "@types/node": "^12.7.2"
+  },
+  "dependencies": {
+    "print-message": "^3.0.1",
+    "ts-node": "^8.3.0"
   }
 }
