@@ -17,7 +17,7 @@ const patternExample = (): void => {
     printRestaurantMenus(estonianRestaurant);
 };
 
-if(require.main == module) {
+if(require.main === module) {
     patternExample();
 }
 

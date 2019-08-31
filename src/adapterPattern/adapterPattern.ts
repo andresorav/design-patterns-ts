@@ -16,8 +16,9 @@ const patternExample = (): void => {
     ]);
 };
 
-if(require.main == module)
+if(require.main === module) {
     patternExample();
+}
 
 export {
     patternExample,
