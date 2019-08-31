@@ -22,12 +22,12 @@
   },
   "homepage": "https://github.com/andresorav/design-patterns-ts#readme",
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^1.10.2",
-    "@typescript-eslint/parser": "^1.10.2",
+    "@types/node": "^12.7.3",
+    "@typescript-eslint/eslint-plugin": "^1.13.0",
+    "@typescript-eslint/parser": "^1.13.0",
     "eslint": "^5.16.0",
-    "tsc-watch": "^2.2.1",
-    "typescript": "^3.5.3",
-    "@types/node": "^12.7.2"
+    "tsc-watch": "^2.4.0",
+    "typescript": "^3.6.2"
   },
   "dependencies": {
     "print-message": "^3.0.1",
