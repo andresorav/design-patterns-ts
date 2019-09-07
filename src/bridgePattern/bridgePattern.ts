@@ -18,7 +18,7 @@ const patternExample = (): void => {
     printYellow(greetings);
 };
 
-if (require.main == module) {
+if (require.main === module) {
     patternExample();
 }
 
