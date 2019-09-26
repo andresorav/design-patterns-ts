@@ -1,4 +1,4 @@
-import { printYellow } from '../beautifulPrint';
+import { printBlue, printYellow } from '../beautifulPrint';
 import { Person } from './implementor/person';
 import { PersonGreeting } from './abstraction/personGreeting';
 import { CatGreeting } from './abstraction/catGreeting';
@@ -7,6 +7,8 @@ import { Bird } from './implementor/bird';
 import { Cat } from './implementor/cat';
 
 const patternExample = (): void => {
+    printBlue('Bridge Pattern');
+
     const animals = [
         new Person(new PersonGreeting()),
         new Cat(new CatGreeting()),
